@@ -84,10 +84,10 @@ function Skills() {
                         }}
                         viewport={{ amount: 0.2 }}
                     >
-                        <div className="animate-infinite-slider flex w-[calc(750px*14)]">
+                        <div className="animate-infinite-slider flex w-[calc(500px*14)]">
                             {logosData.map((logo) => (
                                 <div
-                                    className="flex flex-col items-center justify-center w-[375px]"
+                                    className="flex flex-col items-center justify-center w-[250px]"
                                     key={`logo1-${logo.key}`}
                                 >
                                     <div>{logo.icon}</div>
@@ -97,7 +97,7 @@ function Skills() {
 
                             {logosData.map((logo) => (
                                 <div
-                                    className="flex flex-col items-center justify-center w-[375px]"
+                                    className="flex flex-col items-center justify-center w-[250px]"
                                     key={`logo2-${logo.key}`}
                                 >
                                     <div>{logo.icon}</div>

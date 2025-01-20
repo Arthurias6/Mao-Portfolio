@@ -23,7 +23,7 @@ export default {
                 infiniteSlider: {
                     "0%": { transform: "translateX(0)" },
                     "100%": {
-                        transform: "translateX(calc(-750px * 7))", // 7 is the half the number of icons to display, 500 px is how much of width
+                        transform: "translateX(calc(-500px * 7))", // 7 is the half the number of icons to display, 500 px is how much of width
                     },
                 },
                 scanlines: {
