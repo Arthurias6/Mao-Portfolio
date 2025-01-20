@@ -4,5 +4,7 @@
 
 html,
 body {
+    overflow-x: clip;
     height: 100dvh;
+    background-color: #00060e;
 }

@@ -12,24 +12,18 @@ function Hero() {
         <div
             name="home"
             ref={homeRef}
-            className="w-full h-auto min-h-dvh flex flex-col justify-center items-center md:justify-evenly"
+            className="relative h-auto min-h-dvh flex flex-col justify-center items-center md:justify-evenly bg-no-repeat bg-center bg-cover"
+            style={{ backgroundImage: "url(home.png)" }}
         >
-            <div className="relative w-full h-screen">
-                <img
-                    src="home.png"
-                    alt="Home Image"
-                    className="w-full h-screen object-cover"
-                />
+            <div className="absolute inset-0 bg-gradient-to-b from-50% from-transparent to-51% to-gray-900 bg-[length:100%_4px] animate-scanlines" />
 
-                <div className="absolute inset-0 bg-gradient-to-b from-50% from-transparent to-51% to-gray-900 bg-[length:100%_4px] animate-scanlines" />
-
-                <div className="absolute inset-0 flex items-center justify-center text-center text-primary">
-                    <div>
-                        <h1 className="text-4xl md:text-8xl font-bold">
-                            <Decypher text="MAO LIN" />
-                        </h1>
-                        <p className="mt-4 text-4xl">
-                            <span className="text-secondary">
+            <div className="relative flex items-center justify-center text-center text-primary">
+                <div>
+                    <h1 className="text-4xl md:text-8xl font-bold">
+                        <Decypher text="MAO LIN" />
+                    </h1>
+                    <p className="mt-4 text-4xl">
+                        <span className="text-secondary">
                             <Typewriter
                                 cursorBlinking={true}
                                 cursorStyle="_"
@@ -42,23 +36,19 @@ function Hero() {
                                     "Geek",
                                 ]}
                             />
-                            </span>
-                        </p>
-                    </div>
+                        </span>
+                    </p>
                 </div>
-
-                <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: isVisible ? 1 : 0 }}
-                    transition={{ delay: 0.2, duration: 0.2 }}
-                    className="text-secondary"
-                >
-                    <FaCircleArrowDown
-                        size={40}
-                        className="relative left-1/2 animate-bounce bottom-10"
-                    />
-                </motion.span>
             </div>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isVisible ? 1 : 0 }}
+                transition={{ delay: 0.2, duration: 0.2 }}
+                className="text-secondary absolute bottom-10 animate-bounce"
+            >
+                <FaCircleArrowDown size={40} />
+            </motion.div>
         </div>
     );
 }
